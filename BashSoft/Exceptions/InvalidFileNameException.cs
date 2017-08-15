@@ -1,0 +1,18 @@
+﻿using System;
+
+namespace BashSoft.Exceptions
+{
+    public class InvalidFileNameException : Exception
+    {
+        private const string ForbiddenSymbolsContainedInName = "The given name contains symbols that"
+                                                               + "are not allowed to be used in names of files or folders.";
+
+        public InvalidFileNameException()
+        {   
+        }
+
+        public InvalidFileNameException(string ForbiddenSymbolsContainedInName) : base(ForbiddenSymbolsContainedInName)
+        {
+        }
+    }
+}
